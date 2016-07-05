@@ -16,7 +16,7 @@ namespace MyHomework
 
     public class Leave 
     {
-        readonly DateTime stratingDate;
+        internal DateTime stratingDate;
         readonly public int duration;
         public Employee employee;
         private readonly leaveType leaveType;

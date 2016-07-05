@@ -18,7 +18,7 @@ namespace MyHomework
             this.dateOfEmployment = dateOfEmployment;
             this.salary = salary;
             this.availableDaysOff = availableDaysOff;
-           
+             
         }
 
         public void DisplayInfo(Employee employee)
@@ -31,6 +31,7 @@ namespace MyHomework
 
         private void SubstractDays(int numberDaysOff)
         {
+            
             availableDaysOff = availableDaysOff - numberDaysOff; 
         }
 
@@ -39,7 +40,7 @@ namespace MyHomework
         {
             try
             {
-                if (availableDaysOff < leave.duration)
+                if ((leave.stratingDate.Year == DateTime.Now.Year) && (availableDaysOff < leave.duration))
                 {
                     throw (new NegativeLeaveDaysException ());
                 }
