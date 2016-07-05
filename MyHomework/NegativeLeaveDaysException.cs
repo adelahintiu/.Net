@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 
 namespace MyHomework
 {
-    [Serializable]
+    
     internal class NegativeLeaveDaysException : Exception
     {
         public NegativeLeaveDaysException()

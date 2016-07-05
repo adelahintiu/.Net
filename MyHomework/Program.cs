@@ -10,25 +10,22 @@ namespace MyHomework
     {
         static void Main(string[] args)
         {
-            Employee e1 = new Employee("Popescu", "Alex", "24-03-1992", "20-10-2014", 2500, 10);
-            Employee e2 = new Employee("Dan", "Catalin", "05-10-1994", "10-06-2015", 3000, 6);
-            Employee e3 = new Employee("Dumitrescu", "Ioana", "13-12-1993", "01-07-2016", 1500, 20);
+            Employee employee1 = new Employee("Popescu", "Alex", new DateTime(1992, 03, 29), new DateTime(2016, 03, 06), 2500, 10);
+            Employee employee2 = new Employee("Dan", "Catalin", new DateTime(1994, 06, 05), new DateTime(2015, 06, 16), 3000, 6);
+            Employee employee3 = new Employee("Dumitrescu", "Ioana", new DateTime(1993, 12, 13), new DateTime(2016, 01, 17), 1500, 20);
 
-            Leave l1 = new Leave("10-06-2016", 5, "medical");
-            Leave l2 = new Leave("29-06-2016", 7, "holiday");
-            Leave l3 = new Leave("15-06-2016", 10, "other");
+            Leave leave1 = new Leave(new DateTime(2016, 06, 10), 5, leaveType.medical);
+            Leave leave2 = new Leave(new DateTime(2016, 06, 29), 7, leaveType.holiday);
+            Leave leave3 = new Leave(new DateTime(2016, 03, 06), 10, leaveType.other);
 
-            e1.AddNewLeave(l1);
-            e1.displayInfo(e1);
+            employee1.AddNewLeave(leave1);
+            employee1.DisplayInfo(employee1);
 
-            e2.AddNewLeave(l2);
-            e2.displayInfo(e2);
+            employee2.AddNewLeave(leave2);
+            employee2.DisplayInfo(employee2);
 
-            e3.AddNewLeave(l3);            
-            e3.displayInfo(e3);
-
-
-
+            employee3.AddNewLeave(leave3);
+            employee3.DisplayInfo(employee3);
 
         }
     }

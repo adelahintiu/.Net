@@ -10,9 +10,9 @@ namespace MyHomework
     {
         protected string lastName;
         protected string firstName;
-        protected string dateOfBirth;
+        protected DateTime dateOfBirth;
 
-        protected Person(string lastName, string firstName, string dateOfBirth)
+        protected Person(string lastName, string firstName, DateTime dateOfBirth)
         {
             this.lastName = lastName;
             this.firstName = firstName;

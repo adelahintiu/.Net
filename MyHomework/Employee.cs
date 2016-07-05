@@ -8,31 +8,28 @@ namespace MyHomework
 {
     public class Employee : Person
     {
-        string dateOfEmployment;
-        int salary;
+        readonly DateTime dateOfEmployment;
+        readonly int salary;
         int availableDaysOff;
         List<Leave> listLeaves;
 
-        public Employee(string lastName, string firstName, string dateOfBirth, string dateOfEmployment, int salary, int availableDaysOff) : base(lastName, firstName, dateOfBirth)
+        public Employee(string lastName, string firstName, DateTime dateOfBirth, DateTime dateOfEmployment, int salary, int availableDaysOff) : base(lastName, firstName, dateOfBirth)
         {
-            this.lastName = lastName;
-            this.firstName = firstName;
-            this.dateOfBirth = dateOfBirth;
             this.dateOfEmployment = dateOfEmployment;
             this.salary = salary;
             this.availableDaysOff = availableDaysOff;
            
         }
 
-        public void displayInfo(Employee e)
+        public void DisplayInfo(Employee employee)
         {
-            Console.WriteLine("Lastname : {0}", e.lastName);
-            Console.WriteLine("Firstname: {0}", e.firstName);
-            Console.WriteLine("Salary: {0}", e.salary);
+            Console.WriteLine("Lastname : {0}", employee.lastName);
+            Console.WriteLine("Firstname: {0}", employee.firstName);
+            Console.WriteLine("Salary: {0}", employee.salary);
             Console.WriteLine("Number available days off: {0}", availableDaysOff);
         }
 
-        private void substractDays(int numberDaysOff)
+        private void SubstractDays(int numberDaysOff)
         {
             availableDaysOff = availableDaysOff - numberDaysOff; 
         }
@@ -48,7 +45,7 @@ namespace MyHomework
                 }
                 else
                 {
-                    substractDays(leave.duration);
+                    SubstractDays(leave.duration);
                     leave.employee = this;
     
                     
